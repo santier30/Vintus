@@ -1,7 +1,7 @@
 import { useState } from "react"
 import useProfile from "../../../../Hooks/use-profile"
 import useError from "../../../../Hooks/use-error"
-import useUser from "../../../../Hooks/useUser"
+import useUpdate from "../../../../Hooks/use-update"
 const UserProfile = ()=>{
     const userData = JSON.parse(localStorage.getItem("USER"))
     const [edit,setEdit] = useState(false)
@@ -14,7 +14,7 @@ const UserProfile = ()=>{
         setEmail({value :userData.email,er:''})
         setDNI({value :userData.dni?userData.dni:"",er:''})
     }
-    const {log}= useUser("Guardando...","Guardado","Fallo en el guardado",'/Usuario/');
+    const {update}= useUpdate("Guardando...","Guardado","Fallo en el guardado",'/Usuario/');
 
     const makeError = useError();
 
@@ -24,7 +24,7 @@ const UserProfile = ()=>{
         if (
             name.er==="" && email.er==="" && dni.er==="" && phone.er===""
           ){console.log('a')
-            log({apiKey:userData.apiKey,email:userData.email,newEmail:email.value,name:name.value,dni:dni.value,sex:selectedGender,birth:selectedAge,phone:phone.value},`${process.env.REACT_APP_API_URL}/Vintus/Users/Update`);
+          update({apiKey:userData.apiKey,email:userData.email,newEmail:email.value,name:name.value,dni:dni.value,sex:selectedGender,birth:selectedAge,phone:phone.value},`${process.env.REACT_APP_API_URL}/Vintus/Users/Update`);
           }
    
             
