@@ -14,7 +14,7 @@ const ItemPage = ()=>{
 const [wine,setWine]=useState(false)
 const [flag,setFlag]=useState(true);
 const [quantity,setQuantity]=useState(1)
-let image =  wine.image;
+let image =  wine.image?wine.image:"";
 const ctx = useContext(CartContext)
 const props = {img: image,zoomPosition: "original",width: 300};
 
