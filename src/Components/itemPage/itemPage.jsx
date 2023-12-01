@@ -1,18 +1,17 @@
 import { useState , useEffect,useContext,useCallback } from "react";
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation,useNavigate } from 'react-router-dom';
 import CartContext from '../cart/CartContext'
 import ReactImageZoom from 'react-image-zoom';
 const ItemPage = ()=>{
   const { name } = useParams();
   const query = useLocation().search.slice(1);
-
+  const navigate = useNavigate();
   
   
      
      
  
 const [wine,setWine]=useState(false)
-const [flag,setFlag]=useState(true);
 const [quantity,setQuantity]=useState(1)
 let image =  wine.image?wine.image:"";
 const ctx = useContext(CartContext)
@@ -29,7 +28,7 @@ try {
   setWine(data)
 } catch (error) {
   console.error("Error fetching wine data:", error);
-  setFlag(false)
+  navigate("/")
 }
 
 },[name, query])
@@ -38,7 +37,7 @@ try {
       getWine()
     }, [getWine])
 if(wine){
-  return(flag?<main className="itemPage">
+  return(<main className="itemPage">
   <section className="itemSec">
     <article className="itemImg" >
       {image && <ReactImageZoom {...props}/>}
@@ -71,8 +70,8 @@ if(wine){
     <div className="corner_botom2"></div>
   </section>
 
-</main>:<h1>Producto no encontrado</h1>)
-}else{return <h1>fdsfsdfsdf</h1>}
+</main>)
+}else{return <h1></h1>}
    
 }
 

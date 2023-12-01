@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vintus/static/css/main.de50dff6.css",
-    "main.js": "/Vintus/static/js/main.c91c3b40.js",
+    "main.js": "/Vintus/static/js/main.1c8ba111.js",
     "static/js/787.03802fb9.chunk.js": "/Vintus/static/js/787.03802fb9.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/Vintus/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/Vintus/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -14,11 +14,11 @@
     "static/media/macro-red-wine-black-background-abstract-splashing-ai-generation_201606-6822.avif": "/Vintus/static/media/macro-red-wine-black-background-abstract-splashing-ai-generation_201606-6822.63df5fc618306da18b39.avif",
     "index.html": "/Vintus/index.html",
     "main.de50dff6.css.map": "/Vintus/static/css/main.de50dff6.css.map",
-    "main.c91c3b40.js.map": "/Vintus/static/js/main.c91c3b40.js.map",
+    "main.1c8ba111.js.map": "/Vintus/static/js/main.1c8ba111.js.map",
     "787.03802fb9.chunk.js.map": "/Vintus/static/js/787.03802fb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de50dff6.css",
-    "static/js/main.c91c3b40.js"
+    "static/js/main.1c8ba111.js"
   ]
 }
