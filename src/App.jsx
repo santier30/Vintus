@@ -81,7 +81,7 @@ function App() {
         <Route path="/Ingresar" element={<LogIn/>} />
         <Route path="/CrearCuenta" element={<SingUp/>} />
         <Route path="/" element={<Landing/>}  />
-        <Route path="/Usuario" element={<UserPage resetCart={set} />}>
+        <Route path="/Usuario" element={userData ?<UserPage resetCart={set} />:<LogIn/>}>
           <Route index element={<UserProfile/>} /> 
           <Route path="Direcciones" element={<UserAddress/>} />
           <Route path="Pedidos" element={<UserOrders />} />

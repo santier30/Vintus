@@ -6,8 +6,13 @@ const ItemPage = ()=>{
   const { name } = useParams();
   const query = useLocation().search.slice(1);
 
-
+  
+  
+     
+     
+ 
 const [wine,setWine]=useState({})
+const [flag,setFlag]=useState(true);
 const [quantity,setQuantity]=useState(1)
 let image =  wine.image;
 const ctx = useContext(CartContext)
@@ -24,6 +29,7 @@ try {
   setWine(data)
 } catch (error) {
   console.error("Error fetching wine data:", error);
+  setFlag(false)
 }
 
 },[name, query])
@@ -32,7 +38,7 @@ try {
       getWine()
     }, [getWine])
 
-    return(<main className="itemPage">
+    return(flag?<main className="itemPage">
       <section className="itemSec">
         <article className="itemImg" >
           {image && <ReactImageZoom {...props}/>}
@@ -65,7 +71,7 @@ try {
         <div className="corner_botom2"></div>
       </section>
 
-    </main>)
+    </main>:<h1>Producto no encontrado</h1>)
 }
 
 export default ItemPage
