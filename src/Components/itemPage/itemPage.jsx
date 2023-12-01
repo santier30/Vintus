@@ -11,7 +11,7 @@ const ItemPage = ()=>{
      
      
  
-const [wine,setWine]=useState({})
+const [wine,setWine]=useState(false)
 const [flag,setFlag]=useState(true);
 const [quantity,setQuantity]=useState(1)
 let image =  wine.image;
@@ -37,7 +37,7 @@ try {
     useEffect(() => {
       getWine()
     }, [getWine])
-if(image){
+if(wine){
   return(flag?<main className="itemPage">
   <section className="itemSec">
     <article className="itemImg" >
