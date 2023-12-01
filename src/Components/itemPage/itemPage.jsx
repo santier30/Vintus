@@ -72,7 +72,7 @@ if(image){
   </section>
 
 </main>:<h1>Producto no encontrado</h1>)
-}else{return <h1></h1>}
+}else{return <h1>fdsfsdfsdf</h1>}
    
 }
 
