@@ -62,10 +62,9 @@ const AddAddress  = ({setAdd , add,end})=>{
       };
       const submitHandler = (event) => {
         event.preventDefault();
-        console.log('a')
         if (
             cPostal.er===""
-          ){console.log('a')
+          ){
             log({apiKey:userData.apiKey,email:userData.email,address:{postalCode:cPostal.value,street:calle,number:numero,province:selectedProvince,apartment:departamento}},`${process.env.REACT_APP_API_URL}/Vintus/Users/Address`);
           }
    

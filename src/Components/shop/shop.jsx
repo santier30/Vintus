@@ -51,9 +51,7 @@ const Shop = ()=>{
     if(!response.ok){throw new Error('error')}
     const data = await response.json()
     if(data.length<12){setLoading(false)}
-    console.log(data)
     setFilteredWines(()=>[...filteredWines,...data])
-    console.log(page)
     setPage(page + 1);
 
   };
@@ -62,7 +60,6 @@ const Shop = ()=>{
       const response = await  fetch(`${process.env.REACT_APP_API_URL}/Vintus/Products/Shop`);
   if(!response.ok){throw new Error("Error fetching wines")}
   const data = await response.json()
-  console.log(data)///////////////////////////////////
   const {wines,brands,biggest} = data
   setFilteredWines(wines);
   setBrands(brands);

@@ -20,10 +20,9 @@ const UserProfile = ()=>{
 
     const submitHandler = (event) => {
         event.preventDefault();
-        console.log('a')
         if (
             name.er==="" && email.er==="" && dni.er==="" && phone.er===""
-          ){console.log('a')
+          ){
           update({apiKey:userData.apiKey,email:userData.email,newEmail:email.value,name:name.value,dni:dni.value,sex:selectedGender,birth:selectedAge,phone:phone.value},`${process.env.REACT_APP_API_URL}/Vintus/Users/Update`);
           }
    

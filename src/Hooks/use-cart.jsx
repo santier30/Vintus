@@ -23,7 +23,6 @@ const cartUpdate = async (data) => {
     if (!response.ok) {
       throw new Error(response.message);
     }
-    console.log(response);
     const user = await response.json();
     toast.update(id, { render: "Guardado", type: "success", isLoading: false, autoClose: true });
     localStorage.setItem("USER", JSON.stringify(user))
@@ -55,7 +54,6 @@ const cartUpdate = async (data) => {
             const foundIndex = state.findIndex(item => item.Name === action.payload.Name);
             if (foundIndex !== -1) {
               if(state[foundIndex].Amount + action.payload.Amount <= action.payload.Stock) {
-                console.log(action.payload.Amount)
               const updatedItem = { ...state[foundIndex], Amount: state[foundIndex].Amount + action.payload.Amount };
                 tSuc();
               return [...state.slice(0, foundIndex), updatedItem, ...state.slice(foundIndex + 1)];
@@ -145,7 +143,6 @@ const update = async() => {
  
 }
         useEffect(() => {
-          // console.log(cartItems)
 
           if(userData){
             if (typeof timer.current !== 'undefined') {

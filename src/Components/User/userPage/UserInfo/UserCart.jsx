@@ -12,7 +12,6 @@ const UserCart = ({cartItem, onIncrease, onReduce , clear})=>{
 
 const subTotal = cartItem[0]?cartItem.reduce((a, c) => {return a += parseFloat(c.Price)*c.Amount}, 0).toFixed(2):"Precio Total"
 const total = Number(subTotal)>150?Number(subTotal):Number(subTotal)+20
-console.log(total)
 
 const pay = async()=>{
   try {
@@ -42,7 +41,6 @@ const payIdHandler = (event) => {
     if (
       selectedAddress && cartItem[0] && userData
       ){
-        console.log('a')
         pay()
  
     }    

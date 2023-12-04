@@ -30,7 +30,7 @@ const UserAuth = ()=>{
 
         if (
             password.er===""
-          ){console.log('a')
+          ){
             log({apiKey:userData.apiKey,email:userData.email,newPassword:password.value,password:pass},`${process.env.REACT_APP_API_URL}/Vintus/Users/Password`);
           }
    

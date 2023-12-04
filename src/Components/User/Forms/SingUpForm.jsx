@@ -12,7 +12,6 @@ const SingUpForm = ()=>{
 
     const submitHandler = (event) => {
         event.preventDefault();
-        console.log('a')
         if (
           name.er==="" && email.er==="" && password.er==="" && password.value === cPass
         ) {

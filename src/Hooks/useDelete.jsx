@@ -10,7 +10,6 @@ const useDeleteAddress = ()=>{
                   'X-User-Email': data.email,
                 }
               })
-        console.log(res);
           const user = await res.json();
           localStorage.setItem("USER", JSON.stringify(user))
           navigate(a?a:"/")

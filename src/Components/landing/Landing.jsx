@@ -38,7 +38,6 @@ fetchLand()
   
     useEffect(() => {
       function handleWindowResize() {
-        console.log(scrollPositionExclusive);
         exclusivasRef.current.scrollLeft = scrollRef.current.clientWidth * scrollPositionExclusive;
         knowRef.current.scrollLeft = scrollRef.current.clientWidth * scrollPositionKnow;
         

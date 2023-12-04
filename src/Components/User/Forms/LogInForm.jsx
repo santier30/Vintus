@@ -12,8 +12,6 @@ const LogInForm = ()=>{
 
     const submitHandler = (event) => {
         event.preventDefault();
-        console.log('a')
-
         log({email:email,password:pass},`${process.env.REACT_APP_API_URL}/Vintus/Users/Login`);
    
             

@@ -29,7 +29,7 @@ useEffect(()=>{
         
     } 
   };
-  console.log(name)
+  
     return(
 <main>
   
